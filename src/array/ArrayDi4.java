@@ -1,9 +1,19 @@
 package array;
 
-public class ArrayDi2 {
+public class ArrayDi4 {
     public static void main(String[] args) {
         // 2x3 2차원 배열 만들기
-        int [][] arr = new int[2][3]; // 행2 열3
+        int [][] arr = new int[3][3];
+
+        int i = 1;
+        for (int row = 0; row < arr.length; row++) {
+            for (int column = 0; column < arr[row].length; column++){
+                arr[row][column] = i++;
+            }
+        }
+        // 중첩된 for문을 사용해서 값을 순서대로 입력
+        // arr[row][column] = i++; 후의 증감 연산자(++)를 이용해서 값을 먼저 대입하고 증가시킨다.
+        // 코드에서 int=1로 1부터 시작한다.
 
         // 1차원 배열 초기화 {1, 2, 3}
         // 2차원 배열 초기화 {{1, 2, 3}, {4, 5, 6}}인데 명확하게  구분하기 위해 아래와 같이 작성
@@ -17,7 +27,7 @@ public class ArrayDi2 {
 //        arr[1][1] = 5; // 1행 1열
 //        arr[1][2] = 6; // 0행 2열
 
-        for (int row = 0; row < 2; row++) {
+        for (int row = 0; row < arr.length; row++) {
                 for (int column = 0; column < arr[row].length; column++) {
                 System.out.print(arr[row][column] + " ");
             }

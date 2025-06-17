@@ -1,9 +1,12 @@
 package array;
 
-public class ArrayDi2 {
+public class ArrayDi3 {
     public static void main(String[] args) {
         // 2x3 2차원 배열 만들기
-        int [][] arr = new int[2][3]; // 행2 열3
+        int [][] arr = {
+                {1,2,3},
+                {4,5,6}
+        }; // 행2 열3
 
         // 1차원 배열 초기화 {1, 2, 3}
         // 2차원 배열 초기화 {{1, 2, 3}, {4, 5, 6}}인데 명확하게  구분하기 위해 아래와 같이 작성
@@ -17,7 +20,7 @@ public class ArrayDi2 {
 //        arr[1][1] = 5; // 1행 1열
 //        arr[1][2] = 6; // 0행 2열
 
-        for (int row = 0; row < 2; row++) {
+        for (int row = 0; row < arr.length; row++) {
                 for (int column = 0; column < arr[row].length; column++) {
                 System.out.print(arr[row][column] + " ");
             }
